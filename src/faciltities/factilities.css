@@ -1,0 +1,150 @@
+/* Base styles for Factilities */
+.contFa {
+  padding: 2rem;
+}
+
+.section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2.5rem;
+}
+
+.textFa {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.textFa h1 {
+  color: #4682b4;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.textFa p {
+  color: gray;
+  font-size: 1rem;
+}
+
+.sub-contFa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subFa {
+  cursor: pointer;
+  flex: 1 1 calc(25% - 1rem);
+  margin: 0.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subFa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subFa i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.subFa h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.subFa p {
+  color: gray;
+  font-size: 0.875rem;
+}
+
+.subFa1 i {
+  color: #ff6347;
+}
+
+.subFa2 i {
+  color: #4682b4;
+}
+
+.subFa3 i {
+  color: #ffa07a;
+}
+
+.subFa4 i {
+  color: #32cd32;
+}
+
+.subFa1 h2, .subFa2 h2, .subFa3 h2, .subFa4 h2 {
+  margin-top: 1.5rem;
+}
+
+.subFa1 {
+  position: relative;
+}
+
+.subFa1 .subSub {
+  position: relative;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .subFa {
+      flex: 1 1 calc(33.333% - 1rem); /* Adjust for tablets */
+  }
+
+  .textFa h1 {
+      font-size: 2rem; /* Adjust font size for tablets */
+  }
+
+  .textFa p {
+      font-size: 0.9rem; /* Adjust font size for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subFa {
+      flex: 1 1 calc(50% - 1rem); /* Adjust for small tablets */
+  }
+
+  .textFa h1 {
+      font-size: 1.8rem; /* Adjust font size for small tablets */
+  }
+
+  .textFa p {
+      font-size: 0.85rem; /* Adjust font size for small tablets */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subFa {
+      flex: 1 1 100%; /* Full width for mobile devices */
+      margin: 0.5rem 0; /* Adjust margin for mobile devices */
+  }
+
+  .textFa h1 {
+      font-size: 1.5rem; /* Adjust font size for mobile devices */
+  }
+
+  .textFa p {
+      font-size: 0.8rem; /* Adjust font size for mobile devices */
+  }
+
+  .subFa i {
+      font-size: 2rem; /* Adjust icon size for mobile devices */
+  }
+
+  .subFa h2 {
+      font-size: 1.2rem; /* Adjust heading size for mobile devices */
+  }
+
+  .subFa p {
+      font-size: 0.75rem; /* Adjust paragraph size for mobile devices */
+  }
+}

@@ -1,0 +1,105 @@
+/* Container for the whole section */
+.contP {
+    margin: 2rem;
+}
+
+/* Styling for text section */
+.textP {
+    text-align: center;
+}
+
+.textP h2 {
+    color: #255486;
+}
+
+.textP p {
+    color: rgb(106, 106, 106);
+}
+
+/* Container for the person items */
+.personP {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* Adjusted gap for better spacing */
+}
+
+/* Styling for each person item */
+.sub-personP {
+    flex: 1 1 calc(33% - 2rem); /* Flex-grow, flex-shrink, and basis for responsive layout */
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Adjusted gap between image and text */
+    background-color: #fff; /* Added background color */
+    padding: 1rem; /* Added padding for spacing */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sub-personP:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sub-personP img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%; /* Circular image */
+    max-width: 150px; /* Maximum width for the image */
+}
+
+/* Styling for text inside each person item */
+.sub-sub-person {
+    text-align: center;
+}
+
+.sub-personP h2 {
+    color: #db6e5b;
+    margin: 0.5rem 0; /* Added margin for spacing */
+}
+
+.sub-personP p {
+    color: rgb(105, 105, 105);
+    margin: 0;
+}
+
+/* Icons styling */
+.icons {
+    margin-top: 0.5rem;
+}
+
+.icons i {
+    margin-right: 0.9rem;
+    font-size: 1.4rem;
+    color: #333; /* Default color for icons */
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #db6e5b; /* Hover color for icons */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .personP {
+        flex-direction: column; /* Stacks person items vertically on smaller screens */
+        gap: 1.5rem; /* Adjusted gap for smaller screens */
+    }
+
+    .sub-personP {
+        flex: 1 1 100%; /* Ensures each item takes full width */
+        max-width: 100%; /* Ensures no overflow */
+        text-align: center; /* Centers text on smaller screens */
+    }
+
+    .sub-personP img {
+        max-width: 120px; /* Adjusted image size for smaller screens */
+    }
+
+    .icons i {
+        font-size: 1.2rem; /* Smaller icon size for mobile */
+    }
+}

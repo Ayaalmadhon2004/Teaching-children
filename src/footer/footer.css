@@ -1,0 +1,129 @@
+/* Container for the whole footer */
+.contF {
+  display: flex;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: space-between;
+  background: #255486;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Styling for each section */
+.sectionF1,
+.sectionF2,
+.sectionF3,
+.sectionF4 {
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and basis for responsive layout */
+  margin: 1rem;
+}
+
+/* Contact section styling */
+.sectionF1 h2 {
+  margin-bottom: 1rem;
+}
+
+.sectionF1 p {
+  margin-top: 0.5rem;
+  color: rgb(213, 213, 213);
+}
+
+.f1Icons {
+  margin-top: 1rem;
+}
+
+.f1Icons i {
+  margin-right: 1rem; /* Adjusted margin for better spacing */
+  font-size: 1.5rem; /* Adjusted icon size */
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.f1Icons i:hover {
+  background-color: #ff6347;
+  border: none;
+  color: #fff; /* Changed color to white on hover */
+}
+
+/* Quick links section styling */
+.sectionF2 h2 {
+  margin-bottom: 1rem;
+}
+
+.sectionF2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sectionF2 li {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.sectionF2 li:hover {
+  color: #ff6347;
+}
+
+/* Photo gallery section styling */
+.sectionF3 h2 {
+  margin-bottom: 1rem;
+}
+
+.sectionF3 img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100px; /* Ensures images don't get too large */
+  margin: 0.5rem;
+  border: 2px solid #ffe5e5;
+  border-radius: 0.4rem;
+}
+
+/* Newsletter section styling */
+.sectionF4 h2 {
+  margin-bottom: 0.5rem;
+}
+
+.sectionF4 p {
+  margin-bottom: 0.5rem;
+}
+
+.sectionF4 input {
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  width: 100%; /* Ensures input takes full width */
+  box-sizing: border-box;
+}
+
+.sectionF4 ::placeholder {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .contF {
+      flex-direction: column; /* Stacks sections vertically on smaller screens */
+      align-items: flex-start;
+  }
+
+  .sectionF1,
+  .sectionF2,
+  .sectionF3,
+  .sectionF4 {
+      flex: 1 1 100%; /* Ensures each section takes full width */
+      margin: 1rem 0; /* Adjusted margin for vertical stacking */
+  }
+
+  .sectionF3 img {
+      max-width: 80px; /* Smaller images for mobile */
+  }
+
+  .f1Icons i {
+      font-size: 1.2rem; /* Smaller icons for mobile */
+  }
+}

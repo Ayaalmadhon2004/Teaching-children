@@ -1,0 +1,188 @@
+/* Container for the whole section */
+.contL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Added gap between left and right sections */
+    padding: 7rem; 
+}
+
+/* Styling for the right section */
+.rightL {
+    flex: 1;
+    max-width: 50%; /* Limits the width of the right section */
+}
+
+.rightL h2 {
+    color: #4682b4;
+}
+
+.rightL p {
+    color: gray;
+    margin-top: 2rem;
+}
+
+/* Container for the button and sub-content in the right section */
+.rightContL {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.rightContL .btn {
+    color: #fff;
+    background-color: #ff475f;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem 2rem; /* Adjusted padding for a better button size */
+    cursor: pointer; /* Added pointer cursor for better UX */
+    transition: background-color 0.3s ease;
+}
+
+.rightContL .btn:hover {
+    background-color: #e03e5e; /* Darker shade for hover effect */
+}
+
+/* Container for the sub-content in the right section */
+.subContRightL {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subContRightL img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Styling for the left section */
+.leftL {
+    position: relative;
+    flex: 1;
+    max-width: 50%; /* Limits the width of the left section */
+}
+
+.leftL img {
+    border-radius: 50%;
+}
+
+.sectionL1 img {
+    height: 380px;
+    width: 380px;
+    transition: border 0.4s ease;
+}
+
+.sectionL1 img:hover {
+    border: 10px solid #4682b4;
+}
+
+.sectionL2 {
+    position: absolute;
+    top: 300px;
+    display: flex;
+    gap: 2rem;
+}
+
+.sectionL2 img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transition: border 0.4s ease;
+}
+
+.sectionL2 img:hover {
+    border: 10px solid #ff6347;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .contL {
+        flex-direction: column;
+        padding: 3rem; /* Adjust padding for smaller screens */
+    }
+
+    .rightL, .leftL {
+        max-width: 100%; /* Full width for smaller screens */
+        margin: 0;
+    }
+
+    .rightContL {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rightContL .btn {
+        margin-bottom: 1rem; /* Margin bottom for button on smaller screens */
+    }
+
+    .sectionL1 img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .sectionL2 {
+        top: 150px; /* Adjust position for smaller screens */
+    }
+
+    .sectionL2 img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rightL h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .rightL p {
+        font-size: 0.9rem; /* Smaller font size for paragraphs */
+    }
+
+    .sectionL1 img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .sectionL2 img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contL {
+        padding: 1.5rem; /* Further reduced padding for mobile devices */
+    }
+
+    .rightL h2 {
+        font-size: 1.2rem; /* Smaller font size for headings */
+    }
+
+    .rightL p {
+        font-size: 0.8rem; /* Smaller font size for paragraphs */
+    }
+
+    .sectionL1 img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .sectionL2 img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .rightContL {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subContRightL {
+        margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+}

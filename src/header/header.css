@@ -1,0 +1,154 @@
+/* Base styles for each slide */
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px; /* Default height for slides */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.each-slide-effect .btns {
+    margin-top: 20px;
+}
+
+.each-slide-effect .btns button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.each-slide-effect .btns button:hover {
+    background: #0056b3;
+}
+
+/* Base styles for background */
+.background {
+    height: 70vh; /* Adjust height for background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 160px;
+    color: #fff;
+}
+
+.background1 {
+    background-image: url("../kid1.jpg");
+}
+
+.background2 {
+    background-image: url("../kid2.jpg");
+}
+
+.background h1 {
+    font-size: 2.5rem; /* Adjust font size for h1 */
+    margin-bottom: 1rem;
+}
+
+.background p {
+    font-size: 1rem; /* Adjust font size for paragraph */
+    margin-bottom: 1rem;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btns .btn {
+    background-color: var(--blue);
+    color: #fff;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btns .btn2 {
+    background-color: var(--dark-pink);
+    color: #fff;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .background {
+        padding: 80px 120px; /* Adjust padding for larger screens */
+    }
+
+    .background h1 {
+        font-size: 2rem; /* Adjust font size for h1 */
+    }
+
+    .background p {
+        font-size: 0.9rem; /* Adjust font size for paragraph */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .each-slide-effect > div {
+        height: 300px; /* Reduce height for medium screens */
+    }
+
+    .background {
+        height: 60vh; /* Adjust height for background */
+        padding: 60px 20px; /* Adjust padding for medium screens */
+    }
+
+    .background h1 {
+        font-size: 1.8rem; /* Reduce font size for h1 */
+    }
+
+    .background p {
+        font-size: 0.85rem; /* Reduce font size for paragraph */
+    }
+
+    .btns {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .btns .btn, .btns .btn2 {
+        padding: 10px; /* Adjust padding for smaller buttons */
+        font-size: 0.9rem; /* Reduce font size for buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .each-slide-effect > div {
+        height: 250px; /* Further reduce height for small screens */
+    }
+
+    .background {
+        height: 50vh; /* Further reduce height for background */
+        padding: 40px 10px; /* Further reduce padding for small screens */
+    }
+
+    .background h1 {
+        font-size: 1.5rem; /* Further reduce font size for h1 */
+    }
+
+    .background p {
+        font-size: 0.8rem; /* Further reduce font size for paragraph */
+    }
+
+    .btns .btn, .btns .btn2 {
+        padding: 8px; /* Further reduce padding for small buttons */
+        font-size: 0.8rem; /* Further reduce font size for buttons */
+    }
+}

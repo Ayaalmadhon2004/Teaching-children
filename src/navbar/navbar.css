@@ -1,0 +1,117 @@
+.contN {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section {
+    padding: 20px 60px;
+}
+
+.logo {
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu li {
+    color: var(--dark-pink);
+    list-style: none;
+    margin-right: 1rem;
+    cursor:pointer;
+}
+.menu li:hover{
+    color:var(--light-pink);
+}
+.btn {
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn button{
+    background-color:var(--blue);
+    color:#fff;
+    padding:.5rem;
+    font-weight: 700;
+    font-size:1rem;
+    border:none;
+    border-radius:.5rem;
+}
+.btn button:hover{
+    background-color: var(--dark-pink);
+}
+@media screen and (min-width: 576px) {
+  
+}
+@media screen and (min-width: 750px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .openClose {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+    }
+}
+
+/* Commented out unused CSS
+:root {
+    --brown: #6F4E37;
+    --brown2: #A67B5B;
+    --brown3: #ECB176;
+    --brown4: #FED8B1;
+}
+
+.contN {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--brown);
+    padding: 1rem;
+    color: #fff;
+}
+
+.icon p {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.bar {
+    display: none;
+}
+
+.bar.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar li {
+    list-style-type: none;
+    margin-right: .5rem;
+}
+
+@media screen and (min-width: 750px) {
+    .bar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .open-close {
+        display: none;
+    }
+}
+*/

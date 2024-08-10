@@ -1,0 +1,126 @@
+/* Base styles for desktop screens */
+.contC {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contC h1 {
+    text-align: center;
+    color: #4682b4;
+    margin-bottom: 1rem;
+}
+
+.contC p {
+    text-align: center;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.box {
+    flex: 1 1 calc(33% - 1.5rem); /* Flex-grow, flex-shrink, and basis for responsive layout */
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+    width: 100%;
+    height: 200px; /* Adjusted height for a better aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.sub-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.sub-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sub-box p {
+    margin: 0;
+    color: #333;
+}
+
+.box button {
+    color: #fff;
+    background-color: #4682b4;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box button:hover {
+    background-color: #ffa07a;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .box {
+        flex: 1 1 calc(50% - 1.5rem); /* Adjust for medium-sized screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(100% - 1.5rem); /* Stack boxes vertically for smaller screens */
+    }
+
+    .contC {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .box img {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+
+    .box button {
+        font-size: 0.9rem; /* Smaller font size for button text */
+        padding: 0.5rem 1rem; /* Adjusted padding for smaller buttons */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contC {
+        padding: 0.5rem; /* Further reduced padding for mobile devices */
+    }
+
+    .box img {
+        height: 120px; /* Further reduce image height for mobile screens */
+    }
+
+    .box button {
+        font-size: 0.8rem; /* Smaller font size for button text */
+        padding: 0.4rem 0.8rem; /* Further adjusted padding for mobile devices */
+    }
+}

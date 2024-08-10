@@ -1,0 +1,116 @@
+/* Base styles for desktop screens */
+.contT {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.contT .rightT img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.leftT h2 {
+  color: #4682b4;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.leftT p {
+  color: gray;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.leftT button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: .3rem;
+  padding: .6rem 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.leftT button:hover {
+  background-color: #fe8f7c;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .contT {
+      flex-direction: column;
+      padding: 2rem; /* Added padding for smaller screens */
+  }
+
+  .contT .rightT img {
+      width: 400px;
+      height: 400px;
+  }
+
+  .leftT h2 {
+      font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .leftT p {
+      font-size: 0.9rem; /* Smaller font size for paragraphs */
+  }
+
+  .leftT button {
+      font-size: 1rem; /* Smaller font size for button text */
+      padding: .5rem 1rem; /* Adjusted padding for a better button size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contT .rightT img {
+      width: 300px;
+      height: 300px;
+  }
+
+  .leftT h2 {
+      font-size: 1.2rem; /* Smaller font size for headings */
+  }
+
+  .leftT p {
+      font-size: 0.8rem; /* Smaller font size for paragraphs */
+  }
+
+  .leftT button {
+      font-size: 0.9rem; /* Smaller font size for button text */
+      padding: .4rem 0.8rem; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contT {
+      padding: 1rem; /* Further reduced padding for mobile devices */
+  }
+
+  .contT .rightT img {
+      width: 250px;
+      height: 250px;
+  }
+
+  .leftT h2 {
+      font-size: 1rem; /* Smaller font size for headings */
+  }
+
+  .leftT p {
+      font-size: 0.7rem; /* Smaller font size for paragraphs */
+  }
+
+  .leftT button {
+      font-size: 0.8rem; /* Smaller font size for button text */
+      padding: .3rem 0.6rem; /* Adjusted padding for mobile devices */
+  }
+}
